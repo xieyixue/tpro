@@ -1,3 +1,4 @@
+# coding=utf-8
 from django.contrib import admin
 from web_modles import models
 # Register your models here.
@@ -16,4 +17,5 @@ class UrlAdmin(admin.ModelAdmin):
 
 @admin.register(models.Record)
 class RecordAdmin(admin.ModelAdmin):
-    list_display = ('url','code','source_code', 'create_time')
+    list_display = ('url','agent','code','source_code', 'create_time')
+    ordering = ('url',)
