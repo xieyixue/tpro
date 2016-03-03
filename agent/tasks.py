@@ -33,11 +33,10 @@ def post_data(data):
     print r.status_code, r.text
 
 
-start_check()
+# start_check()
 # check_url("http://www.baidu.com")
 
 if __name__ == "__main__":
     get_urls()
-    #data = [{'url': u'http://baidu.com', 'code': 200}, {'url': u'http://qssec.com', 'code': 200}]
     data = start_check()
     post_data(data)
