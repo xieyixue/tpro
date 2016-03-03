@@ -1,7 +1,7 @@
 # coding=utf-8
 import requests
 import json
-
+import time
 api_url = "http://s1.95xd.com:8000/api/geturls/"
 
 def start_check():
@@ -37,6 +37,8 @@ def post_data(data):
 # check_url("http://www.baidu.com")
 
 if __name__ == "__main__":
-    get_urls()
-    data = start_check()
-    post_data(data)
+    while 1:
+        get_urls()
+        data = start_check()
+        post_data(data)
+        time.sleep(1)
